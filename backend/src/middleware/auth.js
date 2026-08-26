@@ -8,7 +8,7 @@ const auth = asyncHandler(async (req, res, next) => {
       success: false,
       message: 'Not authorized, no session token'
     });
-  }
+  } 
   try {
 
     const decoded = jwt.verify(
