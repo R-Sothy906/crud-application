@@ -85,8 +85,24 @@ export const logout = asyncHandler(async (req, res) => {
           success: true,
           message: 'Logged out successfully'
         });
-
 });
+
+export const getMe = asyncHandler(async(req, res)=> {
+  const user = await User.findById(req.userId);
+  if(!user) {
+    return res.status(404).json({
+      success: false,
+      message: 'User not found!'
+    })
+  }
+  return res.status(201).json({
+    success: true,
+    data: {
+      name: user.name,
+      email: user.email
+    }
+  })
+})
 
 
 

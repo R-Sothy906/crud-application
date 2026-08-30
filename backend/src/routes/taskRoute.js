@@ -16,5 +16,5 @@ route.get('/tasks', getAllTask);
 route.get('/tasks/:id', getTaskById);  
 route.put('/tasks/:id', updateTask);
 route.delete('/tasks/:id', deleteTask); 
-
+ 
 export default route; 
