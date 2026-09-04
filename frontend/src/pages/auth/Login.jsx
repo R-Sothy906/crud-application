@@ -51,7 +51,6 @@ const Login = () => {
 
       navigate('/tasks');
     } catch (err) {
-      console.error('Login failed:', err);
 
       setLocalError(
         err.response?.data?.message ||

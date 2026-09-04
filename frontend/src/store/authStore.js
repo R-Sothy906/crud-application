@@ -121,13 +121,9 @@ const useAuthStore = create((set) => ({
   // Get current user
 getCurrentUser: async () => {
 
-  console.log('Calling /api/me...');
-
   try {
 
     const data = await getMe();
-
-    console.log('Current user:', data);
 
     set({
       user: data.data,
@@ -137,9 +133,6 @@ getCurrentUser: async () => {
     });
 
   } catch (error) {
-
-    console.log('GET /api/me ERROR:', error);
-    console.log('Response:', error.response?.data);
 
     set({
       user: null,

@@ -84,7 +84,6 @@ const Register = () => {
 
       setTimeout(() => navigate('/tasks'), 1200);
     } catch (err) {
-      console.error('Register failed:', err);
 
       setLocalError(
         err.response?.data?.message ||

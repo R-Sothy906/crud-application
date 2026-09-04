@@ -2,7 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import helmet from "helmet";
 import 'dotenv/config'
-import {connectDB} from './src/config/db.js'
+import connectDB from './src/config/db.js'
 import route from './src/routes/index.js';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';  

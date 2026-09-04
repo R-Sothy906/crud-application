@@ -12,7 +12,6 @@ function App() {
     (state) => state.getCurrentUser
   );
   useEffect(() => {
-    console.log('Checking current user...');
     getCurrentUser();
   }, [getCurrentUser]);
   return (

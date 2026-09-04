@@ -60,8 +60,6 @@ const Task = () => {
       try {
         await fetchTasks();
       } catch (err) {
-        console.error('Failed to load tasks:', err);
-
         setLocalError(
           err.response?.data?.message ||
             err.message ||
@@ -103,8 +101,6 @@ const Task = () => {
         'Your task list has been refreshed.'
       );
     } catch (err) {
-      console.error('Failed to load tasks:', err);
-
       Swal.close();
 
       const message =
@@ -179,8 +175,6 @@ const Task = () => {
         'Your new task has been added successfully.'
       );
     } catch (err) {
-      console.error('Operation failed:', err);
-
       const message =
         err.response?.data?.message ||
         err.message ||
@@ -257,8 +251,6 @@ const Task = () => {
         `"${title}" has been removed successfully.`
       );
     } catch (err) {
-      console.error('Delete failed:', err);
-
       Swal.close();
 
       const message =
@@ -278,8 +270,6 @@ const Task = () => {
 
       await fetchTaskById(id);
     } catch (err) {
-      console.error('Fetch task failed:', err);
-
       const message =
         err.response?.data?.message ||
         err.message ||
